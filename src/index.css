@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-brand-youtube: #8b5cf6;
+  --color-brand-title: #6366f1;
+  --color-brand-review: #10b981;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f8fafc] text-slate-900 antialiased;
+  }
+}
+
+.markdown-body h1 { @apply text-4xl font-bold mb-6 mt-8 text-slate-900; }
+.markdown-body h2 { @apply text-2xl font-semibold mb-4 mt-8 text-slate-800 border-b border-slate-200 pb-2; }
+.markdown-body h3 { @apply text-xl font-medium mb-3 mt-6 text-slate-700; }
+.markdown-body p { @apply mb-4 leading-relaxed text-slate-600; }
+.markdown-body ul { @apply list-disc pl-6 mb-4 space-y-2 text-slate-600; }
+.markdown-body ol { @apply list-decimal pl-6 mb-4 space-y-2 text-slate-600; }
+.markdown-body strong { @apply font-semibold text-slate-900; }
+.markdown-body blockquote { @apply border-l-4 border-indigo-500 pl-4 italic my-6 text-slate-700; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300 transition-colors;
+}
+
